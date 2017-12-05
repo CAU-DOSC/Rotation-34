@@ -6,29 +6,17 @@ char *Reverse(char *ary, int d, int n) {
 		str[i] = ary[i];
 	}
 	int c = n - 1;
-	if (d >= 0)
+	if (d < 0)
+		d = -d;
+	for (int a = 1; a <= c; a++)
 	{
-		for (int a = 1; a <= c; a++)
+		for (int b = 0; b < d - 1; b++)
 		{
-			for (int b = 0; b < d - 1; b++)
-			{
-				char temp = str[b];
-				str[b] = str[b + 1];
-				str[b + 1] = temp;
-			}
+			char temp = str[b];
+			str[b] = str[b + 1];
+			str[b + 1] = temp;
 		}
 	}
-	else
-	{
-		for (int a = c; a<0; a++)
-		{
-			for (int b = d - 1; b>0; b--)
-			{
-				char temp = str[b];
-				str[b] = str[b - 1];
-				str[b - 1] = temp;
-			}
-		}
-	}
+	
 	return str;
 }

@@ -61,10 +61,28 @@ A funcion that generate random value d
 1. 협업을 편하게 하기 위해 visual studio 솔루션을 git으로 같이 관리해 clone이나 pull한 직후 따로 프로젝트를 만들지 않아도 compile, debugging할 수 있도록 하였습니다.
 2. 필요한 함수를 각자 하나씩 맡아서 하기로 하여 각 함수마다 파일을 따로 만들어 Owner를 정하고 코드 작성 - 관리하였습니다.
 ----------------------------------------------------------------------------------------------------------------
-출력 결과 : 
-
-
-
+출력 결과 (README.png 참고): 
+Enter Test Size(string size = 1024*2^n) : 10
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+1024         514                :  1          0          1          0
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+2048         1538               :  7          0          7          0
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+4096         3586               :  31         0          36         0
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+8192         -510               :  9          0          10         0
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+16384        7682               :  272        0          312        0
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+32768        -8708              :  659        0          914        0
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+65536        24052              :  4076       0          4455       1
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+131072       89530              :  26251      2          30563      0
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+262144       220230             :  132163     3          149645     0
+STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block      (단위 : ms)
+524288       480538             :  554436     13         652988     3
 
 
 
