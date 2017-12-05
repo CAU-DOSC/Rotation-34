@@ -9,7 +9,7 @@ int main(void) {
 	for (length = 10; length < pow(8, size + 1) + 8; length *= 8) {
 		d = 0,test = 0, T_jug = 0, T_trivial = 0, T_reverse = 0, T_block;
 		char *ary = (char*)malloc((sizeof(char))*length);
-		char *temp = 0;
+		char *temp;
 		d = Generate_d(length);
 		ary = Generate_array(length);
 
@@ -17,19 +17,23 @@ int main(void) {
 		Vector_rotation(ary, d, length);
 		endtime = clock();
 		T_trivial = endtime - starttime;
-		free(temp);
 
 		starttime = clock();
 		Reverse(ary, d, length);
 		endtime = clock();
 		T_reverse = endtime - starttime;
-		free(temp);
 
 		starttime = clock();
-		Juggling(ary, d, length);
+		temp = Juggling(ary, length, d);
 		endtime = clock();
 		T_jug = endtime - starttime;
 		free(temp);
+
+		/*starttime = clock();
+		blockswap(ary, d, length);
+		endtime = clock();
+		T_block = endtime - starttime;
+		free(temp);*/
 
 		printf("STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block\n");
 		printf("%-13d%-19d:   %-8d   %-8d   %-8d   %-8d\n", length, d, T_trivial, T_jug, T_reverse, T_block);

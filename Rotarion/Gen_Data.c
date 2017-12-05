@@ -3,7 +3,7 @@
 int Generate_d(int length) {
   srand((unsigned)time(NULL));
   int temp = rand();
-  return length - 2 * temp % length;
+  return length - 2 * (temp % length);
 }
 
 char *Generate_array(int length) {
