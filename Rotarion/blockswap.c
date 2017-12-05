@@ -22,8 +22,10 @@ void swapr(int arr[],int a_,int b_, int d){
 
 char*blockswap(int *ary, int d, int n){
 	int d1=(d<0)?-d:d;
-	char *temp=(int *)malloc(sizeof(char)*d1);
-
+	char *str=(char *)malloc(sizeof(char)*d1);
+	for (int i = 0; i < n; i++) {
+		str[i] = ary[i];
+	}
 	if(d1==0||d1==n)
 		return;//형태 그대로
 	int a=d1;
@@ -32,31 +34,31 @@ char*blockswap(int *ary, int d, int n){
 	if(d<0){//반시계방향
 		while(a!=b){
 			if(a<b){
-			swapl(ary, d1-a,d1+b-a,a);
+			swapl(str, d1-a,d1+b-a,a);
 			b-=a;
 			}
 			else{
-			swapl(ary, d1-a,d1,b);
+			swapl(str, d1-a,d1,b);
 			a-=b;
 			}
 		
 		}
-		swapl(ary,d1-a,d1,a);
+		swapl(str,d1-a,d1,a);
 
 	}
 	else {//시계방향
 		while (a != b) {
 			if (a < b) {
-				swapr(ary, d1 - a, d1 + b - a, a);
+				swapr(str, d1 - a, d1 + b - a, a);
 				b -= a;
 			}
 			else {
-				swapr(ary, d1 - a, d1, b);
+				swapr(str, d1 - a, d1, b);
 				a -= b;
 
 			}
 		}
-		swapr(ary, d1 - a, d1, a);
+		swapr(str, d1 - a, d1, a);
 	}
-	return ary;
+	return str;
 }

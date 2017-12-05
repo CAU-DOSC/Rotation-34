@@ -24,16 +24,14 @@ int main(void) {
 		T_reverse = endtime - starttime;
 
 		starttime = clock();
-		temp = Juggling(ary, length, d);
+		Juggling(ary, length, d);
 		endtime = clock();
 		T_jug = endtime - starttime;
-		free(temp);
 
-		/*starttime = clock();
-		blockswap(ary, d, length);
-		endtime = clock();
-		T_block = endtime - starttime;
-		free(temp);*/
+		//starttime = clock();
+		//blockswap(ary, d, length);
+		//endtime = clock();
+		//T_block = endtime - starttime;
 
 		printf("STR Length   Rotate Distance    :  Trivial    Juggling   Reverse    Block\n");
 		printf("%-13d%-19d:   %-8d   %-8d   %-8d   %-8d\n", length, d, T_trivial, T_jug, T_reverse, T_block);

@@ -10,6 +10,8 @@ int gcd(int m, int n) {
 char* Juggling(char arr[], int n, int k) {	//인자로 전달되는 n의 크기는 문자열 자체의 크기(널문자 포함안됨)
 	int d = -1, i, j, temp;
 	char* dest = (int*)malloc((sizeof(char))*(n+1));
+	if (k < 0)
+		k = -k;
 	for (int i = 0; i < n; i++) {
 		dest[i] = arr[i];
 	}
