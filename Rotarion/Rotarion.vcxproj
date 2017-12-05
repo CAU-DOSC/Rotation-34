@@ -80,6 +80,7 @@
     <ClInclude Include="Project_Header.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="blockswap.c" />
     <ClCompile Include="Gen_Data.c" />
     <ClCompile Include="Juggling_Algo.c" />
     <ClCompile Include="main.c" />
