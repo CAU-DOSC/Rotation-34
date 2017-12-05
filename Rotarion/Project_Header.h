@@ -11,6 +11,5 @@ char *Reverse(char *str, int d, int n);
 char *Generate_array(int length);
 int Generate_d(void);
 int gcd(int m, int n);
-void swapl(int arr[], int a_, int b_, int d);
-void swapr(int arr[], int a_, int b_, int d);
-char*blockswap(int *ary, int d, int n);
+void swap(char arr[], int a_, int b_, int d);
+char*blockswap(char *ary, int d, int n);
