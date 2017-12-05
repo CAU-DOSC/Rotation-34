@@ -24,7 +24,7 @@ char*blockswap(int *ary, int d, int n){
 	int d1=(d<0)?-d:d;
 	char *temp=(int *)malloc(sizeof(char)*d1);
 
-	if(d1==0||d1=n)
+	if(d1==0||d1==n)
 		return;//형태 그대로
 	int a=d1;
 	int b=n-d1;
