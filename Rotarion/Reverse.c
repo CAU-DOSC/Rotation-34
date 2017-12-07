@@ -14,15 +14,18 @@ char *Reverse(char *ary, int d, int n) {
 		str[i] = str[d - 1 - i];
 		str[d - 1 - i] = temp;
 	}
+
 	for (int i = 0; i < (n - d) / 2; i++) {
 		temp = str[(i + d)];
 		str[(i + d)] = str[n - 1 - i - 1];
 		str[n - 1 - i - 1] = temp;
 	}
+
 	for (int i = 0; i < (n / 2); i++) {
 		temp = str[i];
 		str[i] = str[n - 2 - i];
 		str[n - 2 - i] = temp;
 	}
+
 	return str;
 }
