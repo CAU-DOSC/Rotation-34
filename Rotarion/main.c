@@ -4,9 +4,9 @@ int main(void) {
 	int d = 0, length = 10, test = 0, size = 0;
 	long T_jug = 0, T_trivial = 0, T_reverse = 0, T_block = 0;
 	time_t starttime = 0, endtime = 0;
-	printf("Enter Test Size(string size = 1024*2^n) : ");
+	printf("Enter Test Size(string size = 1024*2^(n - 1) : ");
 	scanf("%d", &size);
-	for (length = 1024; length < pow(2, size + 1) * 1024; length *= 2) {
+	for (length = 1024; length < pow(2, size) * 1024; length *= 2) {
 		d = 0,test = 0, T_jug = 0, T_trivial = 0, T_reverse = 0, T_block;
 		char *ary = (char*)malloc((sizeof(char))*length);
 		char *temp;
